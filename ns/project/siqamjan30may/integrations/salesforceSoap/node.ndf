@@ -45,9 +45,8 @@
   <value name="retry_max">0</value>
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
-    <value name="createdBy">Manoj.Jannu@ibm.com</value>
-    <value name="createdDate">1748600467301</value>
-    <value name="lastModifiedDate">1748600467301</value>
+    <value name="lastModifiedBy">Manoj.Jannu@ibm.com</value>
+    <value name="lastModifiedDate">1748603719171</value>
     <value name="displayName">salesforceSoap</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
@@ -90,7 +89,7 @@
           <value name="connectionType">sagcloud</value>
           <null name="description"/>
         </record>
-        <value name="connectionNSName">siqatestSSoap</value>
+        <value name="connectionNSName">project.siqamjan30may.WmSalesforceProvider.com_softwareag_cloudstreams_salesforce_v53.connections:siqatestSSoap</value>
         <value name="connectionType">sagcloud</value>
         <Boolean name="accountReferenceResolved">true</Boolean>
         <Boolean name="serviceReferenceResolved">true</Boolean>
@@ -112,6 +111,8 @@
         <number name="nodeIndex" type="Long">0</number>
         <number name="lineNumberForDebug" type="Long">1</number>
         <null name="outputMapSet"/>
+        <value name="nodePathForDebug">0</value>
+        <Boolean name="xmlMapsetSupported">true</Boolean>
       </record>
     </record>
   </record>
