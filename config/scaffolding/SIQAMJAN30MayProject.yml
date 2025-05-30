@@ -33,6 +33,9 @@ packages:
   version: 10.7.0.0.66
   wpmServer: https://packages.webmethods.io
   wpmRegistry: supported
+- name: WmSalesforceRESTProvider
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: supported
 services:
 - serviceName: project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_2
   packages:
@@ -155,92 +158,42 @@ services:
   - name: SIQACloudStreamsTests
     version: "1.0"
 configurationVariables:
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.minimumPoolSize
+  : "1"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cr.password
   : "{AES}PG5Tb6QEvoGlmMKcNsze4ljvytV8PRHvfmUQtTsgqcPI8Yi+ekze7ovAUGnGE+qU"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.pr.httpContentCharSet
   : ISO-8859-1
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.user
+  : root
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=2;
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionManagerSettings.poolable
   : "false"
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.driverType
+  : MQ
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.trustStore
   : ""
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.poolIncrementSize
   : "1"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.startupRetryCount
   : "0"
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.pr.allowCircularRedirects
+  : "true"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.pr.followServerRedirects
   : "true"
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.transactionType
+  : NO_TRANSACTION
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.minimumPoolSize
   : "1"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.keepAliveInterval
   : "300000"
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.dbType
-  : MySQL
-  ? iscloudstreamsconnectorservice.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..operations..actions:createaccount.connectionAlias
-  : project.siqamjan30may.WmSalesforceProvider.com_softwareag_cloudstreams_salesforce_v53.connections:siqatestSSoap
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.pr.userAgent
-  : Cloudstreams
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.password
-  : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.rh.requestHeaderValues
-  : "text/xml,login"
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.databaseName
-  : MYSQL_DATABASE
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.hostnameVerifier
-  : org.apache.http.conn.ssl.DefaultHostnameVerifier
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.databaseName
-  : MYSQL_DATABASE
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.keyStore
-  : ""
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.rh.requestHeaderNames
-  : "Content-Type,SOAPAction"
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.sessionExpiry
-  : "14"
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cr.authSchemeType
-  : none
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.transactionType
-  : NO_TRANSACTION
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.timeoutType
-  : fixed
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.maximumPoolSize
-  : "10"
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.driverType
-  : mysqlMJAN
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupRetryCount
-  : "0"
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.readTimeout
-  : "180000"
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.socketStaleCheck
-  : "true"
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.tcpNoDelay
-  : "false"
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupBackoffSecs
-  : "10"
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.portNumber
-  : "3306"
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolable
-  : "false"
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionEnabled
-  : "false"
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.enableSNI
-  : "true"
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.connectTimeout
-  : "180000"
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.minimumPoolSize
-  : "1"
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.user
-  : root
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.otherProperties
-  : loginTimeout=60;driverType=2;
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.driverType
-  : MQ
-  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.pr.allowCircularRedirects
-  : "true"
-  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.transactionType
-  : NO_TRANSACTION
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.sockBuffSize
   : "8192"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.expireTimeout
   : "1000"
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.dbType
+  : MySQL
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cr.username
   : cspro@softwareag.com
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.providerUrl
@@ -249,40 +202,68 @@ configurationVariables:
   : "3"
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.serverName
   : 9.46.196.248
+  ? iscloudstreamsconnectorservice.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..operations..actions:createaccount.connectionAlias
+  : project.siqamjan30may.WmSalesforceProvider.com_softwareag_cloudstreams_salesforce_v53.connections:siqatestSSoap
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.retryIfRequestSentOk
   : "true"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.socketLinger
   : "-1"
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.pr.userAgent
+  : Cloudstreams
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.reuseAddr
   : "false"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cr.preemptiveAuthEnabled
   : "false"
   ? iscloudstreamsconnectorservice.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..operations..actions:createaccount.virtualServiceName
   : WmCloudStreams.SoapVS
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.password
+  : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.serverName
   : 9.46.196.248
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.rh.requestHeaderValues
+  : "text/xml,login"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.blockTimeout
   : "1000"
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.databaseName
+  : MYSQL_DATABASE
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.hostnameVerifier
+  : org.apache.http.conn.ssl.DefaultHostnameVerifier
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolIncrementSize
   : "1"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.idleTimeout
   : "-1"
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.databaseName
+  : MYSQL_DATABASE
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.keyStore
+  : ""
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.pr.useExpectCont
   : "false"
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.sessionExpiry
+  : "14"
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.rh.requestHeaderNames
+  : "Content-Type,SOAPAction"
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.dbType
   : MySQL
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.validateAfterInactivity
   : "1000"
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cr.authSchemeType
+  : none
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.transactionType
+  : NO_TRANSACTION
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.trustStore
   : ""
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.datasourceClass
   : com.mysql.cj.jdbc.MysqlDataSource
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.timeoutType
+  : fixed
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.expireTimeout
   : "1000"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.pr.useChunking
   : "false"
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.otherProperties
   : loginTimeout=60;driverType=thin;
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.maximumPoolSize
+  : "10"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.startupBackoffSecs
   : "10"
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.networkProtocol
@@ -291,16 +272,32 @@ configurationVariables:
   : "false"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.pr.serverRedirectMax
   : "5"
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.driverType
+  : mysqlMJAN
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.keyStore
   : ""
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.readTimeout
+  : "180000"
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.socketStaleCheck
+  : "true"
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.tcpNoDelay
+  : "false"
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.maximumPoolSize
   : "10"
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.heartBeatInterval
   : "0"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.poolable
   : "true"
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupBackoffSecs
+  : "10"
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.pr.protocolVersion
   : HTTP/1.1
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolable
+  : "false"
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.networkProtocol
   : tcp
   ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.connectionEnabled
@@ -309,11 +306,17 @@ configurationVariables:
   : com.mysql.cj.jdbc.MysqlDataSource
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionEnabled
   : "false"
+  ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionEnabled
+  : "false"
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.password
   : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.user
   : siqatest
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MJANMysql.connectionSettings.portNumber
   : "3306"
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.enableSNI
+  : "true"
   ? artConnection.SIQAMJAN30MayProject.project.siqamjan30may.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.blockingTimeout
   : "1000"
+  ? cloudstreamsconnection.project..siqamjan30may..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:siqatestSSoap.cn.connectTimeout
+  : "180000"
